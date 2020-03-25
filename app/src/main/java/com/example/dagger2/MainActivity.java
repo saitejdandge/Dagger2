@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         CarComponent carComponent = DaggerCarComponent.builder().build();
         carComponent.inject(this);
-        Car car = carComponent.getCar();
-        car.drive();
+//        Car car = carComponent.getCar();
+//        car.drive();
         car2.drive();
     }
 }
