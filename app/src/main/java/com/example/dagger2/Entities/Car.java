@@ -2,10 +2,12 @@ package com.example.dagger2.Entities;
 
 import android.util.Log;
 
+import com.example.dagger2.Dagger.Scopes.PerActivity;
 import com.example.dagger2.ThirdParty.Wheels;
 
 import javax.inject.Inject;
 
+@PerActivity
 public class Car {
     private Driver driver;
     private Engine engine;

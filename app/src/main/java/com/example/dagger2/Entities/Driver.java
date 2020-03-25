@@ -1,11 +1,5 @@
 package com.example.dagger2.Entities;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-
-@Singleton
 public class Driver {
-    @Inject
-    public Driver() {
-    }
+
 }
