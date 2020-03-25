@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CarComponent carComponent;
-        carComponent = ((MyApplication) getApplication()).appComponent.getCarcomponentBuilder().horsePower(4).engineCapacity(3).build();
+        carComponent = ((MyApplication) getApplication()).appComponent.getCarComponentFactory().create(4, 3);
 //        carComponent=((MyApplication)getApplication()).appComponent.getCarCcomponent(new D)
         carComponent.inject(this);
 //        Car car = carComponent.getCar();

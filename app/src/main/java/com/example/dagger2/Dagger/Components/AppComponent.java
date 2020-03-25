@@ -9,7 +9,7 @@ import dagger.Component;
 @Singleton
 @Component(modules = {DriverModule.class})
 public interface AppComponent {
-    CarComponent.Builder getCarcomponentBuilder();
+    CarComponent.Factory getCarComponentFactory();
 
 
 }

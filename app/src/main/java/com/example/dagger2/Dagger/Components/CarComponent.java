@@ -18,16 +18,21 @@ public interface CarComponent {
 
     void inject(MainActivity mainActivity);
 
-    @Subcomponent.Builder
-    interface Builder {
-        CarComponent build();
+//    @Subcomponent.Builder
+//    interface Builder {
+//        CarComponent build();
+//
+//        @BindsInstance
+//        Builder horsePower(@Named("horsePower") int horsePower);
+//
+//        @BindsInstance
+//        Builder engineCapacity(@Named("engineCapacity") int engineCapacity);
+//
+//
+//    }
 
-        @BindsInstance
-        Builder horsePower(@Named("horsePower") int horsePower);
-
-        @BindsInstance
-        Builder engineCapacity(@Named("engineCapacity") int engineCapacity);
-
-
+    @Subcomponent.Factory
+    interface Factory {
+        CarComponent create(@BindsInstance @Named("horsePower") int horsePower, @BindsInstance @Named("engineCapacity") int engineCapacity);
     }
 }
