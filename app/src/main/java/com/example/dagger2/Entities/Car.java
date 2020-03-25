@@ -25,7 +25,7 @@ public class Car {
         Log.d(TAG, "drive: zoom");
         Log.d(TAG, "engine " + engine.getClass());
         Log.d(TAG, "wheels " + wheels.getClass());
-        Log.d(TAG, "driver " + driver + " drives " + this);
+        Log.d(TAG, "driver " + driver.name + " drives " + this);
 
     }
 

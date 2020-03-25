@@ -11,5 +11,9 @@ import dagger.Component;
 public interface AppComponent {
     CarComponent.Factory getCarComponentFactory();
 
+    @Component.Factory
+    interface AppComponentFactory {
+        AppComponent create(DriverModule driverModule);
+    }
 
 }
