@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Inject
-    Car car2;
+    Car car, car2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         CarComponent carComponent = DaggerCarComponent.builder().horsePower(4).engineCapacity(3).build();
         carComponent.inject(this);
 //        Car car = carComponent.getCar();
-//        car.drive();
+        car.drive();
         car2.drive();
     }
 }
