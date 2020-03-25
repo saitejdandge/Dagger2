@@ -7,13 +7,13 @@ import com.example.dagger2.ThirdParty.Wheels;
 import javax.inject.Inject;
 
 public class Car {
-    @Inject
-    public Engine engine;
+    private Engine engine;
     private Wheels wheels;
     private static final String TAG = "Car";
 
     @Inject
-    public Car(Wheels wheels) {
+    public Car(Engine engine, Wheels wheels) {
+        this.engine = engine;
         this.wheels = wheels;
     }
 
